@@ -4,7 +4,7 @@ public class Student {
 	
 	private String firstName, lastName, email, age, gender, group;
     boolean redoublant;
-    public static int id;
+    public int id;
     
     public Student(String firstName, String lastName, String email, String age, String gender, String group, boolean redoublant) {
     	this.firstName = firstName;

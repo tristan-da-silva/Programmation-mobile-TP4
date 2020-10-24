@@ -11,12 +11,13 @@ import com.episen.tp4.model.Student;
 public class StudentRepositoryImpl implements StudentRepository{
 	
 	public static ArrayList<Student> list = new ArrayList<>();
+	public static int id = 1;
 	
 	@Override
 	public Student saveStudent(Student student) {
-		student.setId(Student.id);
+		student.setId(id);
 		list.add(student);
-		Student.id = Student.id+1;
+		id++;
 		return student;
 	}
 
