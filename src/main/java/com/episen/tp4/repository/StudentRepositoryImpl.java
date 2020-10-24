@@ -16,7 +16,7 @@ public class StudentRepositoryImpl implements StudentRepository{
 	public Student saveStudent(Student student) {
 		student.setId(Student.id);
 		list.add(student);
-		Student.id++;
+		Student.id = Student.id+1;
 		return student;
 	}
 
