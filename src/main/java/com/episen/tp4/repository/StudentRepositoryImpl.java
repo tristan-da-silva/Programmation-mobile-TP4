@@ -37,9 +37,9 @@ public class StudentRepositoryImpl implements StudentRepository{
 	}
 
 	@Override
-	public boolean deleteStudent(Student student) {
+	public boolean deleteStudent(int id) {
 		for (Student student1: list) {
-			if(String.valueOf(student.getId()).equals(String.valueOf(student1.getId()))) {
+			if(String.valueOf(id).equals(String.valueOf(student1.getId()))) {
 				list.remove(student1);
 			    return true;
 			}

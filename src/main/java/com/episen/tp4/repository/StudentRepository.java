@@ -9,7 +9,7 @@ public interface StudentRepository {
 
     public Student saveStudent(Student student);
     public ArrayList<Student> findAll();
-    public boolean deleteStudent(Student student);
+    public boolean deleteStudent(int id);
     public boolean updateStudent(Student student);
 	Student findStudentById(int id);
 }

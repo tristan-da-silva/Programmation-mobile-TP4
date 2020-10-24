@@ -38,9 +38,9 @@ public class StudentController {
         studentRepository.saveStudent(student);
     }
     
-    @DeleteMapping("/delete/student")
-    public void deleteStudent(@RequestBody Student student) {
-        studentRepository.deleteStudent(student);
+    @DeleteMapping("/delete/student/{id}")
+    public void deleteStudent(@PathVariable int id) {
+        studentRepository.deleteStudent(id);
     }
     
     @PutMapping("/update/student/{id}")
