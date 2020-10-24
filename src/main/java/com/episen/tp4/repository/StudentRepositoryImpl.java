@@ -20,6 +20,16 @@ public class StudentRepositoryImpl implements StudentRepository{
 		id++;
 		return student;
 	}
+	
+	@Override
+	public Student findStudentById(int id) {
+		for(Student student:list) {
+			if (id == student.getId())
+				return student;
+		}
+		return null;
+		
+	}
 
 	@Override
 	public ArrayList<Student> findAll() {

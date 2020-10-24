@@ -11,6 +11,7 @@ public interface StudentRepository {
     public ArrayList<Student> findAll();
     public boolean deleteStudent(Student student);
     public boolean updateStudent(Student student);
+	Student findStudentById(int id);
 }
 
 

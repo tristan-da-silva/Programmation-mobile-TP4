@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -25,6 +26,11 @@ public class StudentController {
     @GetMapping("/student")
     public ArrayList<Student> listStudents() {
         return studentRepository.findAll();
+    }
+    
+    @GetMapping("/student/{id}")
+    public Student findStudent(@PathVariable int id) {
+        return studentRepository.findStudentById(id);
     }
 
     @PostMapping("/add/student")
