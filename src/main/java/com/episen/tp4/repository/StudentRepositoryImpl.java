@@ -14,7 +14,9 @@ public class StudentRepositoryImpl implements StudentRepository{
 	
 	@Override
 	public Student saveStudent(Student student) {
+		student.setId(Student.id);
 		list.add(student);
+		Student.id++;
 		return student;
 	}
 
